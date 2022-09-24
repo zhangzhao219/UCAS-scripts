@@ -23,5 +23,7 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: "3.6"
+    - name: Install requests
+      run: pip install requests
     - name: Run
       run: python ucasclass.py
