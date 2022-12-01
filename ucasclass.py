@@ -96,4 +96,4 @@ if __name__ == '__main__':
     weeknum = (nowdate - startdate).days // 7 + 1
     postclass(weeknum,weekdaylist[nowdate.weekday()],'today')
 
-    sendEmail(weeknum,nowdate.weekday(),'zhaozhao809@163.com','AIOCPCENXBJSMMCX',['zhangzhao219@sina.com'])
+#     sendEmail(weeknum,nowdate.weekday(),'zhaozhao809@163.com','AIOCPCENXBJSMMCX',['zhangzhao219@sina.com'])
