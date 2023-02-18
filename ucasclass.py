@@ -88,11 +88,11 @@ if __name__ == '__main__':
     weekdaylist = ['001','010','011','100','101','110','111']
     startdate = datetime.datetime(2023, 2, 20)
 
-    nowdate = datetime.datetime.now()+ datetime.timedelta(days=4)
+    nowdate = datetime.datetime.now()+ datetime.timedelta(days=2)
     weeknum = (nowdate - startdate).days // 7 + 1
     postclass(weeknum,weekdaylist[nowdate.weekday()],'tomorrow')
     
-    nowdate = datetime.datetime.now()+ datetime.timedelta(days=3)
+    nowdate = datetime.datetime.now()+ datetime.timedelta(days=1)
     weeknum = (nowdate - startdate).days // 7 + 1
     postclass(weeknum,weekdaylist[nowdate.weekday()],'today')
 
