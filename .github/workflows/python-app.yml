@@ -26,4 +26,4 @@ jobs:
     - name: Install requests
       run: pip install requests
     - name: Run
-      run: python ucasclass.py
+      run: python empty_classroom.py

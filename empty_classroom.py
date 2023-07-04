@@ -27,7 +27,6 @@ def postclass(weekname,weekday_name,filename):
             cookie = item.value
 
         cookies = {
-            # 'sepuser': '"bWlkPWQ3MTI2NjJhLTU5NGEtNGQ0MC1iZjNhLTc0MzQxYzAzMjczYQ==  "',
             name: cookie,
         }
             
@@ -76,7 +75,7 @@ def sendEmail(weeknum,weekday,fromaddr,password,toaddrs):
     m['Subject'] = '第' + str(weeknum) + '周-星期' + weekdict[weekday+1] + '教室占用情况'
 
     try:
-        server = smtplib.SMTP('smtp.163.com')
+        server = smtplib.SMTP('发送邮箱SMTP地址')
         server.login(fromaddr,password)
         server.sendmail(fromaddr, toaddrs, m.as_string())
         print('success')
@@ -96,4 +95,4 @@ if __name__ == '__main__':
     weeknum = (nowdate - startdate).days // 7 + 1
     postclass(weeknum,weekdaylist[nowdate.weekday()],'today')
 
-    sendEmail(weeknum,nowdate.weekday(),'zhaozhao809@163.com','AIOCPCENXBJSMMCX',['zhangzhao219@sina.com'])
+    sendEmail(weeknum,nowdate.weekday(),'发送邮箱','发送邮箱客户端密码',['接收邮箱1','接收邮箱2'])
